@@ -66,17 +66,17 @@ The interfaces must be registered for preferences:
   ...           />
   ...
   ...       <preferenceGroup
-  ...           id="app.rss"
-  ...           title="RSS Settings"
-  ...           description="Settings for the RSS feeds"
-  ...           schema="z3c.preference.categories.IRSSSettings"
+  ...           id="app.search"
+  ...           title="Search Settings"
+  ...           schema="z3c.preference.categories.ISearchSettings"
   ...           category="false"
   ...           />
   ...
   ...       <preferenceGroup
-  ...           id="app.search"
-  ...           title="Search Settings"
-  ...           schema="z3c.preference.categories.ISearchSettings"
+  ...           id="app.rss"
+  ...           title="RSS Settings"
+  ...           description="Settings for the RSS feeds"
+  ...           schema="z3c.preference.categories.IRSSSettings"
   ...           category="false"
   ...           />
   ...

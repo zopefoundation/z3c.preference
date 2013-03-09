@@ -5,7 +5,8 @@ Changes
 0.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Sorting preferences in ``CategoryEditForm`` by their `id` to stabialize
+  sort order.
 
 
 0.4 (2012-04-20)

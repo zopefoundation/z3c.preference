@@ -53,6 +53,7 @@ class CategoryEditForm(z3c.form.group.GroupForm,
 
     def __init__(self, *args, **kw):
         super(CategoryEditForm, self).__init__(*args, **kw)
+        sorted_prefs = sorted(self.context.items(), key=lambda x: x[0])
         groups = [PreferenceGroup(pref, self.request, self)
-                  for pref in self.context.values()]
+                  for key, pref in sorted_prefs]
         self.groups = tuple(groups)
