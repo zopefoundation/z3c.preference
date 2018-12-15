@@ -16,16 +16,19 @@
 import os
 from setuptools import setup, find_packages
 
+
 def read(path):
     rnames = path.split('/')
-    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
+    with open(os.path.join(os.path.dirname(__file__), *rnames)) as f:
+        return f.read()
 
-setup (
+
+setup(
     name='z3c.preference',
     version='0.6.dev0',
-    author = "Michael Howitz",
-    author_email = "zope-dev@zope.org",
-    description = "UI for zope.preference using z3c.pagelet and z3c.form.",
+    author="Michael Howitz",
+    author_email="zope-dev@zope.org",
+    description="UI for zope.preference using z3c.pagelet and z3c.form.",
     long_description='\n\n'.join([
             read('README.rst'),
             '.. contents::',
@@ -33,10 +36,10 @@ setup (
             read('src/z3c/preference/README.rst'),
             read('src/z3c/preference/categories.rst'),
             read('TODO.rst'),
-        ]),
-    license = "ZPL 2.1",
-    keywords = "zope3 bluebream z3c preference ui",
-    classifiers = [
+    ]),
+    license="ZPL 2.1",
+    keywords="zope3 bluebream z3c preference ui",
+    classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
@@ -47,14 +50,14 @@ setup (
         'Operating System :: OS Independent',
         'Topic :: Internet :: WWW/HTTP',
         'Framework :: Zope :: 3'
-        ],
-    url = 'http://pypi.python.org/pypi/z3c.preference',
-    packages = find_packages('src'),
-    include_package_data = True,
-    package_dir = {'':'src'},
-    namespace_packages = ['z3c'],
-    extras_require = dict(
-        test = [
+    ],
+    url='http://pypi.python.org/pypi/z3c.preference',
+    packages=find_packages('src'),
+    include_package_data=True,
+    package_dir={'': 'src'},
+    namespace_packages=['z3c'],
+    extras_require=dict(
+        test=[
             'zope.app.wsgi >= 3.7',
             'zope.browserresource',
             'zope.login',
@@ -63,14 +66,14 @@ setup (
             'zope.securitypolicy',
             'zope.testbrowser >= 5',
             'zope.testing',
-            ],
-        ),
-    install_requires = [
+        ],
+    ),
+    install_requires=[
         'setuptools',
         'z3c.form',
         'z3c.formui',
         'z3c.pagelet',
         'zope.preference',
-        ],
-    zip_safe = False,
+    ],
+    zip_safe=False,
 )

@@ -33,6 +33,6 @@ def test_suite():
         'categories.rst',
         setUp=setUp,
         tearDown=tearDown,
-        optionflags=doctest.NORMALIZE_WHITESPACE|doctest.ELLIPSIS)
+        optionflags=doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS)
     suite.layer = z3c.preference.testing.Layer
     return suite
