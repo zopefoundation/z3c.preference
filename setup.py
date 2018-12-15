@@ -61,7 +61,7 @@ setup (
             'zope.principalregistry',
             'zope.app.principalannotation',
             'zope.securitypolicy',
-            'zope.testbrowser',
+            'zope.testbrowser >= 5',
             'zope.testing',
             ],
         ),

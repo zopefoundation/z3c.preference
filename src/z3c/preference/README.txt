@@ -71,7 +71,7 @@ The interface must be registered for preferences:
 To access the forms a browser is needed, the user must be authorized as
 the preferences are stored in the principal annotations:
 
->>> from zope.app.wsgi.testlayer import Browser
+>>> from zope.testbrowser.wsgi import Browser
 >>> browser = Browser()
 >>> browser.addHeader('Authorization', 'Basic mgr:mgrpw')
 
