@@ -40,9 +40,9 @@ setup(
     license="ZPL 2.1",
     keywords="zope3 bluebream z3c preference ui",
     classifiers=[
-        'Development Status :: 3 - Beta',
+        'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
-        'Framework :: Zope :: 3'
+        'Framework :: Zope :: 3',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Zope Public License',
         'License :: OSI Approved',
