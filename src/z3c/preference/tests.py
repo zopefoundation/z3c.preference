@@ -29,10 +29,10 @@ def tearDown(test):
 
 def test_suite():
     suite = doctest.DocFileSuite(
-        'README.txt',
-        'categories.txt',
+        'README.rst',
+        'categories.rst',
         setUp=setUp,
         tearDown=tearDown,
-        optionflags=doctest.NORMALIZE_WHITESPACE|doctest.ELLIPSIS)
+        optionflags=doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS)
     suite.layer = z3c.preference.testing.Layer
     return suite

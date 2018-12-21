@@ -1,0 +1,16 @@
+*.egg-info/
+*.eggs
+*.py[co]
+.coverage
+.coverage.*
+.installed.cfg
+.tox/
+__pycache__/
+bin/
+build/
+coverage.xml
+develop-eggs/
+dist/
+eggs/
+htmlcov/
+parts/

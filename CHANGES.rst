@@ -2,10 +2,12 @@ Changes
 =======
 
 
-0.6 (unreleased)
+1.0 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Update tests to `zope.testbrowser >= 5`.
+
+- Add support for Python 3.6 and 3.7.
 
 
 0.5 (2013-03-09)

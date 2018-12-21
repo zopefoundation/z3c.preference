@@ -14,5 +14,22 @@
 
 import z3c.preference
 import zope.app.wsgi.testlayer
+import zope.testbrowser.wsgi
 
-Layer = zope.app.wsgi.testlayer.BrowserLayer(z3c.preference)
+
+class BrowserLayer(zope.testbrowser.wsgi.Layer,
+                   zope.app.wsgi.testlayer.BrowserLayer):
+    """BrowserLayer which is compatible with zope.testbrowser."""
+
+    def testSetUp(self):
+        super(BrowserLayer, self).testSetUp()
+        self._application.requestFactory._db = self.db
+
+    def testTearDown(self):
+        self._application.requestFactory._publication_cache.clear()
+        super(BrowserLayer, self).testTearDown()
+
+    make_wsgi_app = zope.app.wsgi.testlayer.BrowserLayer.make_wsgi_app
+
+
+Layer = BrowserLayer(z3c.preference)

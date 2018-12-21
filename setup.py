@@ -16,61 +16,71 @@
 import os
 from setuptools import setup, find_packages
 
+
 def read(path):
     rnames = path.split('/')
-    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
+    with open(os.path.join(os.path.dirname(__file__), *rnames)) as f:
+        return f.read()
 
-setup (
+
+setup(
     name='z3c.preference',
-    version='0.6.dev0',
-    author = "Michael Howitz",
-    author_email = "zope-dev@zope.org",
-    description = "UI for zope.preference using z3c.pagelet and z3c.form.",
+    version='1.0.dev0',
+    author="Michael Howitz",
+    author_email="zope-dev@zope.org",
+    description="UI for zope.preference using z3c.pagelet and z3c.form.",
     long_description='\n\n'.join([
-            read('README.txt'),
+            read('README.rst'),
             '.. contents::',
-            read('CHANGES.txt'),
-            read('src/z3c/preference/README.txt'),
-            read('src/z3c/preference/categories.txt'),
-            read('TODO.txt'),
-        ]),
-    license = "ZPL 2.1",
-    keywords = "zope3 bluebream z3c preference ui",
-    classifiers = [
-        'Development Status :: 3 - Alpha',
+            read('CHANGES.rst'),
+            read('src/z3c/preference/README.rst'),
+            read('src/z3c/preference/categories.rst'),
+            read('TODO.rst'),
+    ]),
+    license="ZPL 2.1",
+    keywords="zope3 bluebream z3c preference ui",
+    classifiers=[
+        'Development Status :: 3 - Beta',
         'Environment :: Web Environment',
+        'Framework :: Zope :: 3'
         'Intended Audience :: Developers',
-        'License :: OSI Approved',
         'License :: OSI Approved :: Zope Public License',
-        'Programming Language :: Python',
+        'License :: OSI Approved',
         'Natural Language :: English',
         'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: Implementation',
+        'Programming Language :: Python :: Implementation :: CPython',
         'Topic :: Internet :: WWW/HTTP',
-        'Framework :: Zope :: 3'
-        ],
-    url = 'http://pypi.python.org/pypi/z3c.preference',
-    packages = find_packages('src'),
-    include_package_data = True,
-    package_dir = {'':'src'},
-    namespace_packages = ['z3c'],
-    extras_require = dict(
-        test = [
+    ],
+    url='https://github.com/zopefoundation/z3c.preference',
+    packages=find_packages('src'),
+    include_package_data=True,
+    package_dir={'': 'src'},
+    namespace_packages=['z3c'],
+    extras_require=dict(
+        test=[
             'zope.app.wsgi >= 3.7',
             'zope.browserresource',
             'zope.login',
             'zope.principalregistry',
             'zope.app.principalannotation',
             'zope.securitypolicy',
-            'zope.testbrowser',
+            'zope.testbrowser >= 5',
             'zope.testing',
-            ],
-        ),
-    install_requires = [
+        ],
+    ),
+    install_requires=[
         'setuptools',
         'z3c.form',
         'z3c.formui',
         'z3c.pagelet',
         'zope.preference',
-        ],
-    zip_safe = False,
+    ],
+    zip_safe=False,
 )
