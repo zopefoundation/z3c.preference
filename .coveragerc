@@ -1,6 +1,0 @@
-[run]
-branch = True
-source = z3c.preference
-
-[report]
-precision = 2
