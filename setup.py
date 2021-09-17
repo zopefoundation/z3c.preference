@@ -76,6 +76,7 @@ setup(
             'zope.securitypolicy',
             'zope.testbrowser >= 5',
             'zope.testing',
+            'zope.testrunner',
         ],
     ),
     install_requires=[
