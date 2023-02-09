@@ -25,7 +25,7 @@ def read(path):
 
 setup(
     name='z3c.preference',
-    version='1.1.dev0',
+    version='2.0.dev0',
     author="Michael Howitz",
     author_email="zope-dev@zope.org",
     description="UI for zope.preference using z3c.pagelet and z3c.form.",
