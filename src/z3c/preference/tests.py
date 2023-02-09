@@ -13,9 +13,11 @@
 ##############################################################################
 
 import doctest
-import z3c.preference.testing
+
 import zope.component.testing
 import zope.testing.module
+
+import z3c.preference.testing
 
 
 def setUp(test):

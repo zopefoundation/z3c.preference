@@ -12,9 +12,10 @@
 #
 ##############################################################################
 
-import z3c.preference
 import zope.app.wsgi.testlayer
 import zope.testbrowser.wsgi
+
+import z3c.preference
 
 
 class BrowserLayer(zope.testbrowser.wsgi.Layer,
