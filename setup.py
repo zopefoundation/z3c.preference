@@ -29,7 +29,7 @@ setup(
     name='z3c.preference',
     version='2.0.dev0',
     author="Michael Howitz",
-    author_email="zope-dev@zope.org",
+    author_email="zope-dev@zope.dev",
     description="UI for zope.preference using z3c.pagelet and z3c.form.",
     long_description='\n\n'.join([
             read('README.rst'),
@@ -66,6 +66,7 @@ setup(
     include_package_data=True,
     package_dir={'': 'src'},
     namespace_packages=['z3c'],
+    python_requires='>=3.7',
     extras_require=dict(
         test=[
             'zope.app.wsgi >= 3.7',
