@@ -14,7 +14,9 @@
 """Setup"""
 
 import os
-from setuptools import setup, find_packages
+
+from setuptools import find_packages
+from setuptools import setup
 
 
 def read(path):
@@ -25,9 +27,9 @@ def read(path):
 
 setup(
     name='z3c.preference',
-    version='1.1.dev0',
+    version='2.0.dev0',
     author="Michael Howitz",
-    author_email="zope-dev@zope.org",
+    author_email="zope-dev@zope.dev",
     description="UI for zope.preference using z3c.pagelet and z3c.form.",
     long_description='\n\n'.join([
             read('README.rst'),
@@ -49,14 +51,12 @@ setup(
         'Natural Language :: English',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: Implementation',
         'Programming Language :: Python :: Implementation :: CPython',
         'Topic :: Internet :: WWW/HTTP',
@@ -66,6 +66,7 @@ setup(
     include_package_data=True,
     package_dir={'': 'src'},
     namespace_packages=['z3c'],
+    python_requires='>=3.7',
     extras_require=dict(
         test=[
             'zope.app.wsgi >= 3.7',

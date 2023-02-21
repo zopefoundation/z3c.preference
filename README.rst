@@ -1,5 +1,5 @@
-.. image:: https://travis-ci.com/zopefoundation/z3c.preference.svg?branch=master
-    :target: https://travis-ci.com/zopefoundation/z3c.preference
+.. image:: https://github.com/zopefoundation/z3c.preference/actions/workflows/tests.yml/badge.svg
+    :target: https://github.com/zopefoundation/z3c.preference/actions/workflows/tests.yml
 
 .. image:: https://coveralls.io/repos/github/zopefoundation/z3c.preference/badge.svg
     :target: https://coveralls.io/github/zopefoundation/z3c.preference
