@@ -1,3 +1,8 @@
+**Caution!**
+
+This repository has been archived. If you want to work on it please open a ticket in https://github.com/zopefoundation/meta/issues requesting its unarchival.
+
+
 .. image:: https://github.com/zopefoundation/z3c.preference/actions/workflows/tests.yml/badge.svg
     :target: https://github.com/zopefoundation/z3c.preference/actions/workflows/tests.yml
 
